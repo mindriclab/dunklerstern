@@ -1,0 +1,45 @@
+# Dunkler Stern – Servereinstellungen für Apache (1blu)
+
+# Eigene Fehlerseite
+ErrorDocument 404 /404.html
+
+# Zeichensatz
+AddDefaultCharset UTF-8
+AddCharset UTF-8 .html .css .js .xml .txt .svg
+
+# Richtige Dateitypen
+AddType font/woff2 .woff2
+AddType image/webp .webp
+AddType image/svg+xml .svg
+
+# Immer verschlüsselt und immer ohne www: alles auf https://dunklerstern.de umleiten
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^ https://dunklerstern.de%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Sicherheit: nur eigene Dateien laden, nichts einbetten lassen
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+  # Zwischenspeichern: CSS und JS tragen eine Versionsnummer und dürfen lange bleiben
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(woff2|webp|jpg|png|svg|ico)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "\.(html|xml|txt)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
+
+# Komprimierung
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript image/svg+xml application/xml text/plain
+</IfModule>

@@ -1,0 +1,14 @@
+# Interne Arbeitsdateien, nicht Teil der Website
+CLAUDE.md
+.claude/
+quellen/
+mindriclab-logo-transparent@2x.png
+
+# Systemdateien
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editoren
+.vscode/
+.idea/

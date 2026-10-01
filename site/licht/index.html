@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gekrümmtes Licht · Dunkler Stern</title>
+<meta name="description" content="Ein schwarzes Loch mit Akkretionsscheibe, live im Browser berechnet: Dreh an der Schwerkraft und sieh, wie Licht um das Loch gebogen wird und das bekannte Bild aus Interstellar und vom Event Horizon Telescope entsteht.">
+<link rel="canonical" href="https://dunklerstern.de/licht/">
+<meta name="theme-color" content="#07080d">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Dunkler Stern">
+<meta property="og:title" content="Gekrümmtes Licht · Dunkler Stern">
+<meta property="og:description" content="Ein schwarzes Loch mit Gasscheibe, live berechnet. Dreh an der Schwerkraft und sieh, wie das bekannte Bild entsteht.">
+<meta property="og:url" content="https://dunklerstern.de/licht/">
+<meta property="og:image" content="https://dunklerstern.de/assets/img/og/licht.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/img/kopf/k3.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="preload" href="/assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/base.css?v=20261001">
+<link rel="stylesheet" href="/assets/css/licht.css?v=20261001">
+<script src="/assets/js/common.js?v=20261001" defer></script>
+<script src="/assets/js/licht.js?v=20261001" defer></script>
+</head>
+<body class="k3">
+<a class="skip" href="#inhalt">Zum Inhalt</a>
+
+<header class="site-header">
+  <div class="head-bar">
+    <a class="brand" href="/" aria-label="Dunkler Stern, zur Startseite">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><defs><radialGradient id="bm-glow"><stop offset=".5" stop-color="#f2a33a" stop-opacity="0"/><stop offset=".62" stop-color="#f2a33a" stop-opacity=".6"/><stop offset="1" stop-color="#f2a33a" stop-opacity="0"/></radialGradient></defs><circle cx="16" cy="16" r="15" fill="url(#bm-glow)"/><ellipse cx="16" cy="16" rx="14.5" ry="3.4" fill="none" stroke="#f2a33a" stroke-width="1.6"/><path d="M5.8 16A10.2 10.2 0 0 1 26.2 16" fill="none" stroke="#ffc478" stroke-width="2.2"/><circle cx="16" cy="16" r="7.4" fill="#000" stroke="#ffe2b4" stroke-width=".9"/><path d="M1.5 16A14.5 3.4 0 0 0 30.5 16" fill="none" stroke="#f2a33a" stroke-width="1.6"/></svg>
+      <span>Dunkler Stern</span>
+    </a>
+    <details class="menu">
+      <summary><span class="label-long">Kapitel</span> <span class="now">3 / 6</span><span class="chev" aria-hidden="true"></span></summary>
+      <nav class="menu-panel" aria-label="Kapitel">
+        <ol>
+          <li><a href="/schwerkraft/"><span class="n">01</span><span class="t">Warum Dinge fallen</span><span class="d">Schwerkraft in drei Ebenen erklärt</span></a></li>
+          <li><a href="/entstehung/"><span class="n">02</span><span class="t">Vom Stern zum Loch</span><span class="d">Wie ein schwerer Stern ausbrennt und kollabiert</span></a></li>
+          <li><a href="/licht/" aria-current="page"><span class="n">03</span><span class="t">Gekrümmtes Licht</span><span class="d">Ein schwarzes Loch, live berechnet</span></a></li>
+          <li><a href="/fall/"><span class="n">04</span><span class="t">Der Fall hinein</span><span class="d">Ein Sturz über den Horizont, innen und außen</span></a></li>
+          <li><a href="/kollision/"><span class="n">05</span><span class="t">Wenn Löcher kollidieren</span><span class="d">Gravitationswellen zum Anhören</span></a></li>
+          <li><a href="/offene-fragen/"><span class="n">06</span><span class="t">Was niemand weiß</span><span class="d">Hawking-Strahlung und die großen offenen Fragen</span></a></li>
+          <li class="extra"><a href="/interstellar/"><span class="n">EX</span><span class="t">Interstellar im Faktencheck</span><span class="d">Extra: Was im Film stimmt und was nicht</span></a></li>
+          <li class="home"><a href="/">← Zur Startseite</a></li>
+        </ol>
+      </nav>
+    </details>
+  </div>
+  <div class="progress" aria-hidden="true"></div>
+</header>
+
+<main id="inhalt">
+  <header class="hero">
+    <div class="orb" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="kicker"><span><b>Kapitel 3</b> von 6</span><span class="sep"></span><span>Live-Raytracing · Schwarzschild-Metrik</span></p>
+      <h1>Gekrümmtes Licht</h1>
+      <p class="lead">Ein schwarzes Loch mit flacher Gasscheibe, Pixel für Pixel aus der echten Lichtablenkung berechnet. Dreh an der Schwerkraft und sieh zu, wie aus einem flachen Ring das bekannte Bild eines schwarzen Lochs wird.</p>
+      <nav class="toc" aria-label="In diesem Kapitel">
+        <ol>
+          <li><a href="#labh"><span class="n">01</span>Das Live-Bild</a></li>
+          <li><a href="#tourh"><span class="n">02</span>In sechs Schritten zum Bild</a></li>
+          <li><a href="#sideh"><span class="n">03</span>Welchen Weg das Licht nimmt</a></li>
+          <li><a href="#partsh"><span class="n">04</span>Die Teile des Bildes</a></li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap chapter">
+    <section aria-labelledby="labh">
+      <h2 class="visually-hidden" id="labh">Das Live-Bild</h2>
+      <div class="lab">
+        <div class="screen">
+          <div class="stage" id="stage">
+            <canvas id="gl" role="img" aria-label="Berechnetes Bild eines schwarzen Lochs mit Akkretionsscheibe"></canvas>
+            <div class="chip" id="chip">Schwerkraft 100 % · Blick 8°</div>
+            <div class="midline" id="midline" hidden><span>Diese Linie zeigt die Seitenansicht unten</span></div>
+            <div class="nogl" id="nogl" hidden>Dein Browser hat WebGL abgeschaltet. Ohne WebGL kann das Bild nicht live berechnet werden. Die Seitenansicht weiter unten funktioniert trotzdem.</div>
+          </div>
+        </div>
+
+        <div class="panel controls">
+          <div class="ctl">
+            <div class="ctl-head"><label class="label" for="g">Schwerkraft</label><span class="val" id="gv">100 %</span></div>
+            <input type="range" id="g" min="0" max="100" value="100">
+            <p class="hint">0 % heißt: Licht fliegt geradeaus. 100 % ist die echte Ablenkung.</p>
+          </div>
+          <div class="ctl">
+            <div class="ctl-head"><label class="label" for="el">Blickwinkel</label><span class="val" id="elv">8°</span></div>
+            <input type="range" id="el" min="0" max="70" value="8">
+            <p class="hint">Wie hoch du über der Scheibenebene schwebst.</p>
+          </div>
+          <div class="ctl">
+            <span class="label">Darstellung</span>
+            <div class="seg" role="group" aria-label="Darstellung">
+              <button id="mReal" aria-pressed="true">Realistisch</button>
+              <button id="mCode" aria-pressed="false">Eingefärbt</button>
+            </div>
+            <div class="key" id="key" hidden>
+              <span class="sw amber"></span><span>vordere Hälfte, Oberseite</span>
+              <span class="sw cyan"></span><span>hintere Hälfte, Oberseite</span>
+              <span class="sw magenta"></span><span>hintere Hälfte, Unterseite</span>
+              <span class="sw mint"></span><span>vordere Hälfte, Unterseite</span>
+            </div>
+          </div>
+          <label class="toggle"><input type="checkbox" id="dop"> Doppler-Effekt und Rotverschiebung</label>
+          <label class="toggle"><input type="checkbox" id="mid"> Mittellinie einblenden</label>
+          <button class="btn" id="play">Rotation anhalten</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="tour" aria-labelledby="tourh">
+      <h2 id="tourh">In sechs Schritten zum Bild</h2>
+      <ol class="steps" id="steps">
+        <li><button data-step="0"><span class="n">1</span><span class="t">Ohne Schwerkraft</span></button></li>
+        <li><button data-step="1"><span class="n">2</span><span class="t">Schwerkraft an</span></button></li>
+        <li><button data-step="2"><span class="n">3</span><span class="t">Der Bogen unten</span></button></li>
+        <li><button data-step="3"><span class="n">4</span><span class="t">Echte Farben</span></button></li>
+        <li><button data-step="4"><span class="n">5</span><span class="t">Wie es wirklich aussähe</span></button></li>
+        <li><button data-step="5"><span class="n">6</span><span class="t">Von schräg oben</span></button></li>
+      </ol>
+      <div class="say" id="say" aria-live="polite"></div>
+      <div class="everyday wide">
+        <span class="label">Wie im Alltag</span>
+        <p>Schau durch den dicken Fuß eines Weinglases auf eine Kerze. Das gewölbte Glas biegt das Licht, und aus der kleinen Flamme werden Bögen, manchmal sogar ein ganzer Ring. Schwerkraft macht mit Licht etwas sehr Ähnliches, nur ganz ohne Glas. Astronomen nennen das eine Gravitationslinse.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="sideh">
+      <h2 id="sideh">Seitenansicht: welchen Weg das Licht nimmt</h2>
+      <div class="side">
+        <div class="screen"><canvas class="sidecv" id="side" role="img" aria-label="Seitenansicht mit gebogenen Lichtwegen"></canvas></div>
+        <div class="prose">
+          <p>Hier schaust du von der Seite auf dieselbe Szene. Dein Auge sitzt rechts, weit außerhalb des Bildes. Jede Linie ist ein Lichtweg, der zur senkrechten Mittellinie im Bild oben gehört.</p>
+          <p>Die <strong class="t-cyan">cyan</strong> Linien biegen sich über das Loch und treffen die Oberseite der hinteren Scheibe. Das ist der Buckel. Die <strong class="t-mag">magenta</strong> Linien laufen unten durch, biegen nach oben und treffen die hintere Scheibe von unten. Das ist der Bogen unten. Die grauen Linien enden im Loch. Zusammen ergeben sie den Schatten.</p>
+          <p>Schieb die Schwerkraft oben auf 0 % und beobachte, wie die Linien gerade werden.</p>
+          <div class="everyday">
+            <span class="label">Wie im Alltag</span>
+            <p>An heißen Tagen siehst du auf der Straße manchmal eine Pfütze, die keine ist. Es ist gespiegelter Himmel: Die heiße Luft über dem Asphalt biegt das Licht von oben zu dir hin, und du siehst den Himmel dort, wo er gar nicht ist. Genauso siehst du die hintere Hälfte der Scheibe über dem Loch, obwohl sie dahinter liegt.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="whyh">
+      <h2 id="whyh">Warum vom Auge aus gerechnet wird</h2>
+      <div class="prose">
+        <p>Das heiße Gas strahlt Licht in alle Richtungen. Fast alles davon fliegt irgendwohin ins All. Dich interessiert nur das Licht, das in deinem Auge landet. Deshalb verfolgt man jeden Pixel rückwärts: vom Auge aus, entlang der gekrümmten Bahn, bis man auf Gas, Sterne oder das Loch trifft. Weil Lichtwege in beide Richtungen gleich verlaufen, ist das physikalisch dasselbe. Genau so entsteht das Bild oben, einmal für jeden der Hunderttausenden Pixel.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="partsh">
+      <h2 id="partsh">Die Teile des Bildes</h2>
+      <div class="cards3 four">
+        <div class="c-amber"><h3>Das flache Band</h3><p>Die vordere Hälfte der Scheibe. Ihr Licht kommt fast gerade bei dir an, deshalb sieht sie aus wie erwartet.</p></div>
+        <div class="c-cyan"><h3>Der Buckel oben</h3><p>Die hintere Hälfte, eigentlich vom Loch verdeckt. Die Schwerkraft biegt ihr Licht über das Loch zu dir.</p></div>
+        <div class="c-magenta"><h3>Der Bogen unten</h3><p>Ebenfalls die hintere Hälfte, aber ihre Unterseite. Das Licht läuft unter dem Loch durch.</p></div>
+        <div class="c-ink"><h3>Das Schwarze</h3><p>Der Schatten: alle Blickrichtungen, die im Loch enden. Er wirkt rund 2,6-mal größer als der Ereignishorizont.</p></div>
+      </div>
+      <p class="intro">Längen misst man hier in Schwarzschild-Radien, kurz rₛ. Das ist der Radius des Ereignishorizonts, für die Sonne etwa 3 km. Wie er zustande kommt, zeigt <a class="xref" href="/entstehung/">Vom Stern zum Loch</a>.</p>
+      <div class="facts">
+        <div class="fact"><b>1 rₛ</b><span>Ereignishorizont. Für 10 Sonnenmassen etwa 30 km.</span></div>
+        <div class="fact"><b>1,5 rₛ</b><span>Photonensphäre. Hier kann Licht im Kreis fliegen.</span></div>
+        <div class="fact"><b>≈ 2,6 rₛ</b><span>Sichtbarer Radius des Schattens.</span></div>
+        <div class="fact"><b>3 rₛ</b><span>Innerer Rand der Scheibe. Näher dran gibt es keine stabile Umlaufbahn.</span></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="arth">
+      <h2 id="arth">Was an den bekannten Bildern Kunst ist</h2>
+      <div class="prose">
+        <p>Die Form auf den meisten Bildern stimmt. Die gleichmäßige Helligkeit nicht: Das Gas kreist mit bis zu halber Lichtgeschwindigkeit, die Seite, die auf dich zukommt, wäre deutlich heller (Schritt 5). Interstellar hat das bewusst weggelassen, und die meisten Bilder im Netz kopieren diesen Look.</p>
+        <p>Die Farbe ist eine Entscheidung. Das Gas ist Millionen Grad heiß und strahlt hauptsächlich Röntgenlicht, das kein Auge sieht. Ob man Blau, Weiß oder Orange zeigt, ist Geschmack. Gezogene Sterne im Hintergrund, wie man sie oft sieht, sind ein Bewegungseffekt aus der Bildgestaltung.</p>
+      </div>
+    </section>
+
+    <aside class="method" aria-label="So ist das gerechnet">
+      <span class="label">So ist das gerechnet</span>
+      <p>Längen in Schwarzschild-Radien (rₛ). Die Lichtbahnen folgen der Gleichung für Photonen um ein nicht rotierendes schwarzes Loch. Die Scheibe ist unendlich dünn angenommen, die Gas-Struktur ist erfunden.</p>
+    </aside>
+
+    <nav class="chap-nav" aria-label="Weiterlesen">
+      <a class="chap-link prev" href="/entstehung/"><span class="dir">← Kapitel 2</span><span class="t">Vom Stern zum Loch</span><span class="d">Wie ein schwerer Stern ausbrennt und in weniger als einer Sekunde in sich zusammenstürzt.</span></a>
+      <a class="chap-link next" href="/fall/"><span class="dir">Kapitel 4 →</span><span class="t">Der Fall hinein</span><span class="d">Eine Astronautin fällt hinein, eine zweite Person schaut zu. Beide erleben etwas völlig anderes.</span></a>
+    </nav>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="grid">
+    <div class="about">
+      <a class="brand" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><radialGradient id="fm-glow"><stop offset=".5" stop-color="#f2a33a" stop-opacity="0"/><stop offset=".62" stop-color="#f2a33a" stop-opacity=".6"/><stop offset="1" stop-color="#f2a33a" stop-opacity="0"/></radialGradient></defs><circle cx="16" cy="16" r="15" fill="url(#fm-glow)"/><ellipse cx="16" cy="16" rx="14.5" ry="3.4" fill="none" stroke="#f2a33a" stroke-width="1.6"/><path d="M5.8 16A10.2 10.2 0 0 1 26.2 16" fill="none" stroke="#ffc478" stroke-width="2.2"/><circle cx="16" cy="16" r="7.4" fill="#000" stroke="#ffe2b4" stroke-width=".9"/><path d="M1.5 16A14.5 3.4 0 0 0 30.5 16" fill="none" stroke="#f2a33a" stroke-width="1.6"/></svg><span>Dunkler Stern</span></a>
+      <p>Schwarze Löcher zum Ausprobieren. Sechs Kapitel mit Simulationen, an denen du selbst drehen kannst.</p>
+    </div>
+    <nav aria-label="Alle Kapitel">
+      <h2>Kapitel</h2>
+      <ol>
+        <li><a href="/schwerkraft/"><span class="n">01</span>Warum Dinge fallen</a></li>
+        <li><a href="/entstehung/"><span class="n">02</span>Vom Stern zum Loch</a></li>
+        <li><a href="/licht/"><span class="n">03</span>Gekrümmtes Licht</a></li>
+        <li><a href="/fall/"><span class="n">04</span>Der Fall hinein</a></li>
+        <li><a href="/kollision/"><span class="n">05</span>Wenn Löcher kollidieren</a></li>
+        <li><a href="/offene-fragen/"><span class="n">06</span>Was niemand weiß</a></li>
+        <li><a href="/interstellar/"><span class="n">EX</span>Interstellar im Faktencheck</a></li>
+      </ol>
+    </nav>
+    <nav aria-label="Rechtliches">
+      <h2>Rechtliches</h2>
+      <ul>
+        <li><a href="/impressum/">Impressum</a></li>
+        <li><a href="/datenschutz/">Datenschutz</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="base">
+    <span class="privacy-badge">Keine Cookies, kein Tracking.</span>
+    <a class="credit" href="https://mindriclab.de">Gestaltet und entwickelt von <img src="/assets/img/mindriclab-logo.webp" width="236" height="24" alt="mindric lab"></a>
+  </div>
+</footer>
+</body>
+</html>

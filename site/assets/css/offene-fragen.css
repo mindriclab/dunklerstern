@@ -1,0 +1,24 @@
+/* Kapitel 6 · Was niemand weiß – nur die Bausteine, die es hier gibt */
+@media (min-width:881px){.k6 .inst{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}}
+.k6 .cv{aspect-ratio:auto;height:300px}
+.k6 .status{border-left-color:var(--amber)}
+.row{gap:6px}
+.chip{font-family:var(--mono);font-size:12px;background:rgba(7,8,13,.35);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:7px 11px;cursor:pointer;transition:border-color .15s,background .15s}
+.chip:hover{border-color:var(--amber);background:var(--panel-2)}
+.everyday.wide{max-width:760px}
+
+/* Fragen in zwei Spalten */
+.q{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:880px){.q{grid-template-columns:minmax(0,1fr)}}
+.q>div{display:flex;flex-direction:column;gap:12px;min-width:0}
+.q p{max-width:62ch}
+.status-tag{font-family:var(--mono);font-size:12px;color:var(--magenta);letter-spacing:.08em;text-transform:uppercase}
+
+/* Zeitleiste */
+.timeline{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;border-left:1px solid var(--line);max-width:760px}
+.timeline li{display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px;padding:12px 0 12px 22px;position:relative}
+.timeline li::before{content:"";position:absolute;left:-4px;top:21px;width:7px;height:7px;border-radius:50%;background:var(--mute)}
+.timeline li.key::before{background:var(--amber);box-shadow:0 0 0 3px rgba(242,163,58,.18),0 0 10px rgba(242,163,58,.6)}
+.timeline .yr{font-family:var(--mono);font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink)}
+.timeline li.key .yr{color:var(--amber)}
+.timeline p{font-size:16px}

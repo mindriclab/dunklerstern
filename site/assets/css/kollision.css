@@ -1,0 +1,6 @@
+/* Kapitel 5 · Wenn Löcher kollidieren – nur die Bausteine, die es hier gibt.
+   Loch 1 amber, Loch 2 magenta: Zuordnungsfarben mit Bezug auf die Regler. */
+@media (min-width:881px){.k5 .inst{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}}
+.cv.strip{aspect-ratio:auto;height:180px}
+#m1{--range-c:var(--amber)}
+#m2{--range-c:var(--magenta)}

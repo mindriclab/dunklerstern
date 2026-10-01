@@ -1,0 +1,26 @@
+/* Extra · Interstellar im Faktencheck – nur die Bausteine, die es hier gibt */
+.kx{--accent:var(--amber)}
+.kx .orb{background-image:url("/assets/img/kopf/kx.webp")}
+
+/* Urteil je Szene */
+.verdict{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:999px;border:1px solid var(--line);margin-top:-8px}
+.verdict::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.verdict.ok{color:var(--amber);border-color:rgba(242,163,58,.45)}
+.verdict.open{color:var(--magenta);border-color:rgba(224,92,193,.45)}
+.verdict.fiction{color:var(--mute)}
+
+/* Szene mit Bild */
+.scene{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:880px){.scene{grid-template-columns:minmax(0,1fr)}}
+.shot{margin:0;display:flex;flex-direction:column;gap:10px}
+.shot img{display:block;width:100%;height:auto;border-radius:5px}
+.shot figcaption{font-size:14px;color:var(--mute);line-height:1.5}
+
+/* Rechner */
+.row.spread{justify-content:space-between}
+.clocks{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.clocks div{display:flex;flex-direction:column;gap:4px;padding:12px 14px;border:1px solid var(--line);border-radius:var(--radius);background:#0b0e15}
+.clocks b{font-family:var(--mono);font-weight:600;font-size:20px;font-variant-numeric:tabular-nums}
+.clocks div:last-child b{color:var(--amber)}
+@media (max-width:480px){.clocks b{font-size:16px}}
+.status{border-left-color:var(--amber)}

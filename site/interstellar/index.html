@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Interstellar im Faktencheck · Dunkler Stern</title>
+<meta name="description" content="Was in Interstellar stimmt und was nicht: Gargantuas Aussehen, Millers Planet mit 1 Stunde = 7 Jahre, der Sturz in das Loch, das Wurmloch und der Tesserakt. Mit Rechner zum Selbstdrehen.">
+<link rel="canonical" href="https://dunklerstern.de/interstellar/">
+<meta name="theme-color" content="#07080d">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Dunkler Stern">
+<meta property="og:title" content="Interstellar im Faktencheck · Dunkler Stern">
+<meta property="og:description" content="Was im Film stimmt, was nicht, und warum Millers Planet ein extrem schnell rotierendes schwarzes Loch braucht.">
+<meta property="og:url" content="https://dunklerstern.de/interstellar/">
+<meta property="og:image" content="https://dunklerstern.de/assets/img/og/interstellar.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/img/kopf/kx.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="preload" href="/assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/base.css?v=20261001">
+<link rel="stylesheet" href="/assets/css/interstellar.css?v=20261001">
+<script src="/assets/js/common.js?v=20261001" defer></script>
+<script src="/assets/js/interstellar.js?v=20261001" defer></script>
+</head>
+<body class="kx">
+<a class="skip" href="#inhalt">Zum Inhalt</a>
+
+<header class="site-header">
+  <div class="head-bar">
+    <a class="brand" href="/" aria-label="Dunkler Stern, zur Startseite">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><defs><radialGradient id="bm-glow"><stop offset=".5" stop-color="#f2a33a" stop-opacity="0"/><stop offset=".62" stop-color="#f2a33a" stop-opacity=".6"/><stop offset="1" stop-color="#f2a33a" stop-opacity="0"/></radialGradient></defs><circle cx="16" cy="16" r="15" fill="url(#bm-glow)"/><ellipse cx="16" cy="16" rx="14.5" ry="3.4" fill="none" stroke="#f2a33a" stroke-width="1.6"/><path d="M5.8 16A10.2 10.2 0 0 1 26.2 16" fill="none" stroke="#ffc478" stroke-width="2.2"/><circle cx="16" cy="16" r="7.4" fill="#000" stroke="#ffe2b4" stroke-width=".9"/><path d="M1.5 16A14.5 3.4 0 0 0 30.5 16" fill="none" stroke="#f2a33a" stroke-width="1.6"/></svg>
+      <span>Dunkler Stern</span>
+    </a>
+    <details class="menu">
+      <summary><span class="label-long">Kapitel</span> <span class="now">Extra</span><span class="chev" aria-hidden="true"></span></summary>
+      <nav class="menu-panel" aria-label="Kapitel">
+        <ol>
+          <li><a href="/schwerkraft/"><span class="n">01</span><span class="t">Warum Dinge fallen</span><span class="d">Schwerkraft in drei Ebenen erklärt</span></a></li>
+          <li><a href="/entstehung/"><span class="n">02</span><span class="t">Vom Stern zum Loch</span><span class="d">Wie ein schwerer Stern ausbrennt und kollabiert</span></a></li>
+          <li><a href="/licht/"><span class="n">03</span><span class="t">Gekrümmtes Licht</span><span class="d">Ein schwarzes Loch, live berechnet</span></a></li>
+          <li><a href="/fall/"><span class="n">04</span><span class="t">Der Fall hinein</span><span class="d">Ein Sturz über den Horizont, innen und außen</span></a></li>
+          <li><a href="/kollision/"><span class="n">05</span><span class="t">Wenn Löcher kollidieren</span><span class="d">Gravitationswellen zum Anhören</span></a></li>
+          <li><a href="/offene-fragen/"><span class="n">06</span><span class="t">Was niemand weiß</span><span class="d">Hawking-Strahlung und die großen offenen Fragen</span></a></li>
+          <li class="extra"><a href="/interstellar/" aria-current="page"><span class="n">EX</span><span class="t">Interstellar im Faktencheck</span><span class="d">Extra: Was im Film stimmt und was nicht</span></a></li>
+          <li class="home"><a href="/">← Zur Startseite</a></li>
+        </ol>
+      </nav>
+    </details>
+  </div>
+  <div class="progress" aria-hidden="true"></div>
+</header>
+
+<main id="inhalt">
+  <header class="hero">
+    <div class="orb" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="kicker"><span><b>Extra</b></span><span class="sep"></span><span>Physik im Film</span></p>
+      <h1>Interstellar im Faktencheck</h1>
+      <p class="lead">Ein schwarzes Loch namens Gargantua, ein Planet, auf dem eine Stunde sieben Jahre dauert, und ein Sturz über den Horizont. Was davon ist echte Physik?</p>
+      <nav class="toc" aria-label="Auf dieser Seite">
+        <ol>
+          <li><a href="#s1"><span class="n">01</span>Gargantuas Aussehen</a></li>
+          <li><a href="#s2"><span class="n">02</span>Millers Planet</a></li>
+          <li><a href="#s3"><span class="n">03</span>Der Sturz in Gargantua</a></li>
+          <li><a href="#s4"><span class="n">04</span>Das Wurmloch</a></li>
+          <li><a href="#s5"><span class="n">05</span>Der Tesserakt</a></li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap chapter">
+    <section aria-labelledby="s0">
+      <h2 class="visually-hidden" id="s0">Gargantua in Zahlen</h2>
+      <p class="intro">Interstellar gehört zu den wenigen Filmen, bei denen ein Physiker von Anfang an mitgearbeitet hat: Kip Thorne, der 2017 den Nobelpreis für den Nachweis von Gravitationswellen bekam. Vieles im Film ist deshalb echte Physik, manches ist knapp an der Grenze des Möglichen, und ein Teil ist schlicht Fantasie. Fünf Szenen im Faktencheck.</p>
+      <div class="facts">
+        <div class="fact"><b>100 Mio.</b><span>Sonnenmassen hat Gargantua</span></div>
+        <div class="fact"><b>1 h = 7 Jahre</b><span>auf Millers Planet, verglichen mit der Erde</span></div>
+        <div class="fact"><b>≈ 61.000 ×</b><span>langsamer läuft dort die Zeit</span></div>
+        <div class="fact"><b>1 − 1,3 · 10⁻¹⁴</b><span>so nah an der größtmöglichen Drehung muss Gargantua sein</span></div>
+      </div>
+    </section>
+
+    <!-- 1 -->
+    <section aria-labelledby="s1">
+      <h2 class="sec-title" id="s1"><span class="sec-num">1</span><span>Gargantuas Aussehen</span></h2>
+      <p class="verdict ok">Stimmt</p>
+      <div class="scene">
+        <div class="prose">
+          <p>Das Bild von Gargantua, der flache Ring vorne und der Bogen, der sich über und unter das Schwarze legt, ist keine Fantasie eines Grafikers. Das Effektstudio Double Negative hat es mit Thornes Gleichungen berechnet, Lichtstrahl für Lichtstrahl, genau wie der Raytracer in <a class="xref" href="/licht/">Gekrümmtes Licht</a>. Die Ergebnisse wurden 2015 sogar als Fachartikel veröffentlicht.</p>
+          <p>Zwei Dinge hat das Team bewusst vereinfacht. Die Seite der Scheibe, die auf dich zufliegt, wäre in Wirklichkeit viel heller und bläulicher als die andere. Das hätte das Publikum verwirrt und wurde weggelassen. Außerdem dreht sich Gargantua im Bild langsamer, als es die Geschichte eigentlich verlangt. Bei fast maximaler Drehung würde der Schatten auf einer Seite abgeflacht aussehen.</p>
+        </div>
+        <figure class="shot">
+          <div class="screen"><img src="/assets/img/karten/interstellar.webp" width="800" height="500" alt="Berechnetes schwarzes Loch mit Gasscheibe, fast genau von der Seite gesehen" loading="lazy" decoding="async"></div>
+          <figcaption>Berechnet mit dem Raytracer aus <a class="xref" href="/licht/">Gekrümmtes Licht</a>, ohne Doppler-Effekt, wie im Film. Kein Bild aus dem Film.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section aria-labelledby="s2">
+      <h2 class="sec-title" id="s2"><span class="sec-num">2</span><span>Millers Planet: 1 Stunde = 7 Jahre</span></h2>
+      <p class="verdict ok">Stimmt, aber nur ganz knapp</p>
+      <p class="intro">Auf dem Wasserplaneten vergeht eine Stunde, während auf der Erde sieben Jahre verstreichen. Thorne hielt das zuerst für unmöglich. Zwei Effekte bremsen die Zeit: Der Planet sitzt tief im Schwerkraftfeld, und er rast mit einem großen Teil der Lichtgeschwindigkeit um das Loch. Bei einem Loch, das sich nicht dreht, reicht das aber nicht annähernd. Die Lösung ist die Drehung.</p>
+      <div class="inst">
+        <div class="screen"><canvas class="cv" id="cvMiller" role="img" aria-label="Blick von oben auf ein rotierendes schwarzes Loch, seinen Horizont und Millers Planet auf der innersten stabilen Bahn"></canvas></div>
+        <div class="panel">
+          <div>
+            <div class="ctl-head"><label class="label" for="spin">Drehung des Lochs</label><span class="val" id="spinV">–</span></div>
+            <input type="range" id="spin" min="0" max="1000" value="867">
+            <div class="row spread"><span class="hint">steht still</span><span class="hint">fast maximal</span></div>
+          </div>
+          <div class="row">
+            <button class="btn" id="noSpin">Ohne Drehung</button>
+            <button class="btn primary" id="film">Wie im Film</button>
+            <button class="btn" id="restart">Uhren zurücksetzen</button>
+          </div>
+          <div class="read">
+            <div><span>DREHUNG (MAX. = 1)</span><b id="rSpin">–</b></div>
+            <div><span>ZEIT LÄUFT LANGSAMER</span><b id="rFactor">–</b></div>
+            <div><span>1 STUNDE DORT = HIER</span><b id="rHour">–</b></div>
+            <div><span>FILM-WERT 7 JAHRE</span><b id="rFilm">–</b></div>
+          </div>
+          <div class="clocks" aria-live="off">
+            <div><span class="label">Uhr auf dem Planeten</span><b id="cPlanet">–</b></div>
+            <div><span class="label">Auf der Erde vergangen</span><b id="cEarth">–</b></div>
+          </div>
+          <p class="status" id="mSay"></p>
+        </div>
+      </div>
+      <div class="cols">
+        <div>
+          <p>Ein rotierendes Loch zieht den Raum um sich herum mit. Für einen Planeten, der in dieselbe Richtung kreist, rückt die innerste stabile Bahn dadurch viel näher an den Horizont heran. Je schneller die Drehung, desto tiefer kann der Planet im Schwerkraftfeld sitzen, ohne hineinzufallen.</p>
+          <p>Für die 7 Jahre aus dem Film muss Gargantua so schnell rotieren, dass nur 1,3 Hundertbillionstel zur größtmöglichen Drehung fehlen. Der Planet kreist dann fast direkt am Horizont. Physikalisch erlaubt, in der Natur aber kaum zu erwarten: Gas, das in ein echtes Loch fällt, bremst die Drehung knapp unter dem Maximum aus.</p>
+        </div>
+        <div class="everyday">
+          <span class="label">Wie im Alltag</span>
+          <p>Dreh einen Löffel in einem Glas Honig. Der Honig in der Nähe dreht sich mit, obwohl ihn niemand direkt berührt. Ein rotierendes schwarzes Loch macht dasselbe mit dem Raum um sich herum. Wer mit dem Strom kreist, wird mitgetragen und kann sich viel näher heranwagen.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section aria-labelledby="s3">
+      <h2 class="sec-title" id="s3"><span class="sec-num">3</span><span>Der Sturz in Gargantua</span></h2>
+      <p class="verdict ok">Stimmt</p>
+      <div class="cols">
+        <div>
+          <p>Am Ende lässt sich Cooper in Gargantua fallen und überlebt den Horizont. Das klingt gewagt, ist aber richtig. Bei einem schwarzen Loch mit 100 Millionen Sonnenmassen ist der Unterschied zwischen dem Zug an Kopf und Füßen am Horizont winzig: nur wenige Millionstel der Erdschwere, selbst bei schnellster Drehung. Zerrissen wird man erst viel weiter innen.</p>
+          <p>Bei einem kleinen Loch mit 10 Sonnenmassen wäre es umgekehrt. Dort wird man lange vor dem Horizont in die Länge gezogen. Probier beide Größen in <a class="xref" href="/fall/">Der Fall hinein</a> aus.</p>
+        </div>
+        <div>
+          <h3>Was man von draußen sähe</h3>
+          <p>Wer von außen zuschaut, sieht Cooper nie über den Horizont fallen. Er würde immer langsamer, röter und blasser, bis er verschwindet. Für ihn selbst geht der Sturz in kurzer Zeit weiter. Beide Sichtweisen stimmen, sie begegnen sich nur nie.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 -->
+    <section aria-labelledby="s4">
+      <h2 class="sec-title" id="s4"><span class="sec-num">4</span><span>Das Wurmloch bei Saturn</span></h2>
+      <p class="verdict open">Erlaubt, aber nie gesehen</p>
+      <div class="cols">
+        <div>
+          <p>Im Film erscheint das Wurmloch als leuchtende Kugel, in der man verzerrt eine fremde Galaxie sieht. Diese Darstellung ist durchdacht: Ein Wurmloch wäre kein Trichter, wie man ihn oft gezeichnet sieht, sondern ein kugelförmiges Fenster an einen anderen Ort. Auch dieses Bild wurde mit Thornes Gleichungen berechnet.</p>
+          <p>Ob es Wurmlöcher gibt, ist eine andere Frage. Einsteins Gleichungen erlauben sie, aber um eines offen zu halten, bräuchte es Materie mit negativer Energie, die man in größeren Mengen nie gefunden hat. Mehr dazu in <a class="xref" href="/offene-fragen/">Was niemand weiß</a>.</p>
+        </div>
+        <div class="everyday">
+          <span class="label">Wie im Alltag</span>
+          <p>Ein Wurmloch wäre ein bisschen wie ein runder Spiegel, in dem du nicht dich selbst siehst, sondern einen ganz anderen Raum. Egal, von welcher Seite du darauf zugehst, er sieht immer rund aus, wie eine Kugel. Durch eine solche Kugel fliegt im Film die Endurance.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 -->
+    <section aria-labelledby="s5">
+      <h2 class="sec-title" id="s5"><span class="sec-num">5</span><span>Der Tesserakt</span></h2>
+      <p class="verdict fiction">Science-Fiction</p>
+      <div class="prose">
+        <p>Im Inneren von Gargantua landet Cooper in einem Raum mit zusätzlichen Dimensionen und schickt über die Schwerkraft Botschaften in die Vergangenheit. Dafür gibt es in der bekannten Physik keine Grundlage. Zusätzliche Raumdimensionen werden zwar in manchen Theorien diskutiert, beobachtet wurde keine. Und dass aus dem Inneren eines schwarzen Lochs eine Nachricht nach draußen gelangt, widerspricht allem, was man über den Horizont weiß.</p>
+        <p>Das ist kein Fehler des Films, sondern eine bewusste Entscheidung. Wo die Physik nichts mehr sagen kann, darf eine Geschichte weitererzählen.</p>
+      </div>
+      <p class="closing">Interstellar ist kein Dokumentarfilm. Aber selten lag ein Film so nah an der echten Physik, und selten hat ein Film so viele Menschen neugierig auf schwarze Löcher gemacht.</p>
+    </section>
+
+    <aside class="method" aria-label="So ist das gerechnet">
+      <span class="label">So ist das gerechnet</span>
+      <p>Der Rechner bestimmt die Zeitdehnung für einen Planeten auf der innersten stabilen Kreisbahn in der Äquatorebene eines rotierenden schwarzen Lochs, der in Drehrichtung umläuft (Formeln von Bardeen, Press und Teukolsky, 1972). Für 1 Stunde = 7 Jahre ergibt sich eine Drehung von 1 − 1,33 · 10⁻¹⁴ des Maximums und ein Bahnradius von nur 4 · 10⁻⁵ Gravitationsradien über dem Horizont. Das deckt sich mit den Werten aus der Fachliteratur. Das Bild ist schematisch, die Abstände sind nicht maßstäblich. Die Uhren laufen zeitgerafft: eine Stunde auf dem Planeten in acht Sekunden.</p>
+    </aside>
+
+    <nav class="chap-nav" aria-label="Weiterlesen">
+      <a class="chap-link prev" href="/offene-fragen/"><span class="dir">← Kapitel 6</span><span class="t">Was niemand weiß</span><span class="d">Hawking-Strahlung, verlorene Information und die Frage, was in der Mitte ist.</span></a>
+      <a class="chap-link next" href="/"><span class="dir">Zum Anfang →</span><span class="t">Dunkler Stern</span><span class="d">Zurück zur Übersicht aller sechs Kapitel.</span></a>
+    </nav>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="grid">
+    <div class="about">
+      <a class="brand" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><radialGradient id="fm-glow"><stop offset=".5" stop-color="#f2a33a" stop-opacity="0"/><stop offset=".62" stop-color="#f2a33a" stop-opacity=".6"/><stop offset="1" stop-color="#f2a33a" stop-opacity="0"/></radialGradient></defs><circle cx="16" cy="16" r="15" fill="url(#fm-glow)"/><ellipse cx="16" cy="16" rx="14.5" ry="3.4" fill="none" stroke="#f2a33a" stroke-width="1.6"/><path d="M5.8 16A10.2 10.2 0 0 1 26.2 16" fill="none" stroke="#ffc478" stroke-width="2.2"/><circle cx="16" cy="16" r="7.4" fill="#000" stroke="#ffe2b4" stroke-width=".9"/><path d="M1.5 16A14.5 3.4 0 0 0 30.5 16" fill="none" stroke="#f2a33a" stroke-width="1.6"/></svg><span>Dunkler Stern</span></a>
+      <p>Schwarze Löcher zum Ausprobieren. Sechs Kapitel mit Simulationen, an denen du selbst drehen kannst.</p>
+    </div>
+    <nav aria-label="Alle Kapitel">
+      <h2>Kapitel</h2>
+      <ol>
+        <li><a href="/schwerkraft/"><span class="n">01</span>Warum Dinge fallen</a></li>
+        <li><a href="/entstehung/"><span class="n">02</span>Vom Stern zum Loch</a></li>
+        <li><a href="/licht/"><span class="n">03</span>Gekrümmtes Licht</a></li>
+        <li><a href="/fall/"><span class="n">04</span>Der Fall hinein</a></li>
+        <li><a href="/kollision/"><span class="n">05</span>Wenn Löcher kollidieren</a></li>
+        <li><a href="/offene-fragen/"><span class="n">06</span>Was niemand weiß</a></li>
+        <li><a href="/interstellar/"><span class="n">EX</span>Interstellar im Faktencheck</a></li>
+      </ol>
+    </nav>
+    <nav aria-label="Rechtliches">
+      <h2>Rechtliches</h2>
+      <ul>
+        <li><a href="/impressum/">Impressum</a></li>
+        <li><a href="/datenschutz/">Datenschutz</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="base">
+    <span class="privacy-badge">Keine Cookies, kein Tracking.</span>
+    <a class="credit" href="https://mindriclab.de">Gestaltet und entwickelt von <img src="/assets/img/mindriclab-logo.webp" width="236" height="24" alt="mindric lab"></a>
+  </div>
+</footer>
+</body>
+</html>

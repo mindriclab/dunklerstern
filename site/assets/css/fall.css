@@ -1,0 +1,16 @@
+/* Kapitel 4 · Der Fall hinein – nur die Bausteine, die es hier gibt */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+@media (max-width:760px){.split{grid-template-columns:minmax(0,1fr)}}
+.view{display:flex;flex-direction:column;gap:10px;min-width:0}
+.vhead{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.vhead h3{font-size:18px}
+.split .cv{aspect-ratio:4/3}
+.clock{font-family:var(--mono);font-size:13px;color:var(--mute);font-variant-numeric:tabular-nums}
+.clock b{color:var(--ink);font-weight:600}
+.vsay{font-size:15px;line-height:1.5;border-left:3px solid var(--line);padding-left:12px;min-height:4.5em}
+.vsay.out{border-color:var(--magenta)} .vsay.in{border-color:var(--amber)}
+.ctrlbar{background:linear-gradient(180deg,var(--panel),#0c0f17);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center}
+.grp{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.ctrlbar .seg{grid-auto-columns:auto}
+.ctrlbar .seg button{padding:10px 12px}
+.everyday.wide{max-width:760px}
