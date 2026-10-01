@@ -66,3 +66,5 @@
 .letter::before{content:"„";position:absolute;right:28px;top:-18px;font-family:var(--display);font-weight:700;font-size:120px;line-height:1;color:rgba(242,163,58,.18)}
 .letter p{font-size:clamp(18px,2vw,20px);line-height:1.65;max-width:60ch}
 .letter .sig{font-family:var(--display);font-weight:500;font-size:22px;color:var(--amber)}
+.letter .support-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;margin-top:6px;padding-top:18px;border-top:1px solid var(--line)}
+.letter .support-row p{font-size:16px;color:var(--mute);max-width:44ch}

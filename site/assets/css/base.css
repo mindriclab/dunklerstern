@@ -278,3 +278,24 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 .legal ul{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:4px}
 .legal .adr{line-height:1.7}
 .legal .stand{font-family:var(--mono);font-size:13px;color:var(--mute)}
+
+/* ---------- Unterstützen ---------- */
+.site-footer .support-link a{color:var(--amber);text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.03em}
+.site-footer .support-link a:hover{text-decoration:underline}
+.support{display:flex;flex-direction:column;gap:36px;padding-block:clamp(48px,7vw,80px)}
+.support>*{max-width:760px}
+.pay-card{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px;padding:24px 26px;border:1px solid rgba(242,163,58,.35);border-radius:12px;background:radial-gradient(520px 220px at 0 0,rgba(242,163,58,.1),transparent 70%),var(--panel)}
+.pay-card h2,.support h2.sub{font-size:clamp(20px,2.4vw,24px)}
+.pay-card p{margin-top:4px;color:var(--mute);font-size:16px}
+.wallets{display:flex;flex-direction:column;gap:14px;margin-top:16px}
+.wallet{display:flex;align-items:center;gap:22px;padding:18px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.wallet .qr{flex:none;width:136px;height:136px;padding:4px;border-radius:8px;background:#fff}
+.wallet .qr svg{display:block;width:100%;height:100%}
+.w-body{display:flex;flex-direction:column;gap:8px;min-width:0}
+.w-body h3{font-size:18px}
+.w-body code{font-family:var(--mono);font-size:13px;color:var(--mute);overflow-wrap:anywhere}
+.w-body .btn{align-self:flex-start;padding:8px 12px;font-size:12px}
+@media (max-width:520px){.wallet{flex-direction:column;align-items:flex-start}}
+.support .hint{font-size:14px}
+.support .thanks{font-family:var(--display);font-weight:500;font-size:20px}
+.support .thanks .sig{color:var(--amber);margin-left:6px}
